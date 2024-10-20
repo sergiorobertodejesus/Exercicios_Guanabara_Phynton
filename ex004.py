@@ -1,4 +1,9 @@
-valor_1= int(input(' Digite um valor : '))
-valor_2= int(input('Digite outro valor : '))
-soma = valor_1 + valor_2
-print(f'A soma entre {valor_1} e {valor_2} e = {soma}')
+examinador = str(input('Digite algo : '))
+print(f'O tipo primitivo desse valor é {type(examinador)}')
+print(f'So tem espaços {examinador.isspace()}')
+print(f'É um numero: {examinador.isnumeric()}')
+print(f'É Alfabetico: {examinador.isalpha()}')
+print(f'É alfanumerico: {examinador.isalpha()}')
+print(f'Esta em maiuscula: {examinador.isupper()}')
+print(f'Esta em minuscula: {examinador.islower()}')
+print(f'Esta capitalizada: {examinador.istitle()}')
