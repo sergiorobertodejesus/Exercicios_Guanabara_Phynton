@@ -1,1 +1,1 @@
-print("  Óla,Mundo  ")
+import math
