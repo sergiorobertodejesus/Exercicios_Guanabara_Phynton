@@ -1,23 +1,19 @@
-import random,time
-print('-=' *20)
-print('''Sou seu computador ...\n
-      Acabei de pensar em um numero entre 0 e 10.\n
-      Sera que vc consegue adivinhar qual foi ''')
-print('-=' *20)
-numero = random.randint(1,11)
-eu = None
-while True:
-    eu = int(input("Qual seu palpite: "))
-    if eu == -1:
-        print("\033[0;31;46mate logo\033[m")
-        break
+from random import randint
+computador = randint(0,10)
+print("Sou seu computador...")
+print("Acabei de pensar em um numero entre 0 e 10.")
+print("Sera que consegue adivinhar qual foi: ")
+acerto = False
+tentativa = 0
+while not acerto:
+    palpite = int(input("Qual seu palpite: "))
+    tentativa += 1
+    if palpite == computador:
+        acerto = True
     else:
-        print("PROCESSANDO....")
-        time.sleep(3)
-        if numero == eu:
-            print(f"Voçe acertou! voçe ganhou")
-        else:
-            print(f"GANHEI! Eu pensei no numero {numero} e não no {eu}")
-
-
-
+        if palpite < computador:
+            print("Mais...! tente outra vez")
+        elif palpite > computador:
+            print("Menos...!tente outra vez")
+            
+print(f"Voçe acertou com {tentativa} parabens")
